@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'page-login',
-  templateUrl: 'login.html',
+  templateUrl: 'login.page.html',
 })
 export class LoginPage {
 

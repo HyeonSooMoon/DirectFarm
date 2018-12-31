@@ -1,20 +1,25 @@
 <ion-app>
   <ion-split-pane>
-    <ion-menu side="start" menuId="leftsidemenu" >
+    <ion-menu side="start" menuId="leftsidemenu" maxEdgeStart="100">
       <ion-header>
         <ion-toolbar color="primary">
           <ion-title>Start Menu</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="leftSideMenuClose()">
+              <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+
         </ion-toolbar>
       </ion-header>
       <ion-content>
         <ion-list>
           <ion-menu-toggle>
             <ion-item [routerLink]="'login'" [routerDirection]="'root'">
-              <ion-icon slot="start" [name]="peple"></ion-icon>
+              <!--ion-icon slot="start" name="peple"></ion-icon-->
               <ion-label>Login</ion-label>
             </ion-item>
           </ion-menu-toggle>
-
         </ion-list>
       </ion-content>
     </ion-menu>

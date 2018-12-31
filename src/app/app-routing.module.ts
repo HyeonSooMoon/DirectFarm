@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginPage } from './login/login.page'
 
 const routes: Routes = [
-  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }
-  , { path: 'taps', loadChildren: './tabs/tabs.module#TabsPageModule' }
-  ,{ path: 'login', loadChildren: './login/login.module#LoginPageModule'}
+  //{path:'', redirectTo: '/main', pathMatch: 'full'}
+  { path: '', loadChildren: './main/main.module#MainPageModule'}
+  , { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' }
+  ,{ path: 'login', component: LoginPage}
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

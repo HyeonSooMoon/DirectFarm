@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
@@ -13,7 +12,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: './tab1/tab1.module#Tab1PageModule'
           }
         ]
       },
@@ -22,7 +21,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
+            loadChildren: './tab2/tab2.module#Tab2PageModule'
           }
         ]
       },
@@ -31,13 +30,13 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            loadChildren: './tab3/tab3.module#Tab3PageModule'
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/tab2',
         pathMatch: 'full'
       }
     ]
